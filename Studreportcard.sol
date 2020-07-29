@@ -4,17 +4,17 @@ contract StudentRecord{
     
     string studname;
     string rollno;
-    string branch;
+    uint batch;
     uint  clanguage;
     uint  datastructures;
     uint  chemistry;
     uint  english;
     string status;
     
-    function StudentRecord(string newStudname, string newRollno, string newBranch, uint newClang, uint newDatastruct, uint newChem, uint newEng, string newStatus)public{
+    function StudentRecord(string newStudname, string newRollno, uint newBatch, uint newClang, uint newDatastruct, uint newChem, uint newEng, string newStatus)public{
         studname = newStudname;
         rollno = newRollno;
-        branch = newBranch;
+        batch = newBatch;
         clanguage = newClang;
         datastructures = newDatastruct;
         chemistry = newChem;
@@ -22,8 +22,8 @@ contract StudentRecord{
         status = newStatus;
     }
     
-    function getStudentDetails()public view returns(string,string,string,uint,uint,uint,uint,string){
-        return(studname,rollno,branch,clanguage,datastructures,chemistry,english,status);
+    function getStudentDetails()public view returns(string,string,uint,uint,uint,uint,uint,string){
+        return(studname,rollno,batch,clanguage,datastructures,chemistry,english,status);
     }
     
 }
